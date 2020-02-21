@@ -2,16 +2,16 @@
 
 This is the official TypeScript template for [Create React App](https://github.com/facebook/create-react-app).
 
-To use this template, add `--template cavenoxa` when creating a new app.
+To use this template, add `--template @haqadosch/cra-template-cavenoxa` when creating a new app.
 
 For example:
 
 ```sh
-npx create-react-app my-app --template cavenoxa
+npx create-react-app my-app --template @haqadosch/cra-template-cavenoxa
 
 # or
 
-yarn create react-app my-app --template cavenoxa
+yarn create react-app my-app --template @haqadosch/cra-template-cavenoxa
 ```
 
 For more information, please refer to:
