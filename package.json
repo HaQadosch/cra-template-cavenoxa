@@ -1,6 +1,10 @@
 {
   "name": "cra-template-cavenoxa",
   "version": "0.1.0",
+  "author": {
+    "name": "HaQadosch Berraka",
+    "email": "haqadosch@pm.me"
+  },
   "keywords": [
     "react",
     "create-react-app",
