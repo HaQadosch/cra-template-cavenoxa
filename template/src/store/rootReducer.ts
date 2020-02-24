@@ -1,4 +1,4 @@
-import { counterSlice } from "./Slices/counter"
+import { counterSlice } from "./slices/counter"
 import { combineReducers } from "@reduxjs/toolkit"
 
 

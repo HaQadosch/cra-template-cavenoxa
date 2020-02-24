@@ -1,4 +1,4 @@
-import { incrementAsync, delay } from "../Store/saga";
+import { incrementAsync, delay } from "../store/saga";
 import { call, put } from "redux-saga/effects";
 
 test('incrementAsync', () => {

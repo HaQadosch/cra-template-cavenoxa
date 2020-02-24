@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import { Counter } from '../Counter'
 import { Provider } from 'react-redux'
-import { store } from '../Store/store'
+import { store } from '../store/store'
 
 test('renders sync', () => {
   const { getByText } = render(

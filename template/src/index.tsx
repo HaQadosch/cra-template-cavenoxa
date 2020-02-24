@@ -5,7 +5,7 @@ import { App } from './App'
 import * as serviceWorker from './serviceWorker'
 
 import { Provider } from "react-redux"
-import { store } from "./Store/store"
+import { store } from "./store/store"
 
 class ErrorBoundary extends React.Component<{}, { hasError: boolean }, {}> {
   constructor (props: any) {
