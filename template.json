@@ -1,5 +1,16 @@
 {
   "package": {
+    "husky": {
+      "hooks": {
+        "pre-commit": "pretty-quick --staged && npm run test"
+      }
+    },
+    "prettier": {
+      "printWidth": 120,
+      "singleQuote": true,
+      "jsxSingleQuote": true,
+      "trailingComma": "all"
+    },
     "dependencies": {
       "@reduxjs/toolkit": "^1.2.5",
       "@testing-library/jest-dom": "^5.1.1",
@@ -15,6 +26,16 @@
       "react-redux": "^7.2.0",
       "react-scripts": "3.4.0",
       "typescript": "^3.8.2"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "postbuild": "mv build ../../.dist",
+      "build:local": "rm -rf ../../.dist && npm run build",
+      "sync": "npm run build:local && aws s3 sync ../../.dist/ s3://cx-shared-frontend-bucket-dev/$(echo $USER) --profile saml",
+      "postsync": "echo please visit https://cx-shared-frontend-bucket-dev.s3.eu-central-1.amazonaws.com/$(echo $USER)/index.html",
+      "test": "react-scripts test --watchAll=false",
+      "eject": "react-scripts eject"
     }
   }
 }
