@@ -2,7 +2,7 @@
   "package": {
     "husky": {
       "hooks": {
-        "pre-commit": "pretty-quick --staged && npm run test"
+        "pre-commit": "pretty-quick --staged --pattern '**/*.*(js|jsx|ts|tsx)' && npm run test"
       }
     },
     "prettier": {
@@ -34,7 +34,7 @@
       "build": "react-scripts build",
       "postbuild": "mv build ../../.dist",
       "build:local": "rm -rf ../../.dist && npm run build",
-      "sync": "npm run build:local && aws s3 sync ../../.dist/ s3://cx-shared-frontend-bucket-dev/$(echo $USER) --profile saml",
+      "sync": "npm run build:local && aws s3 sync ../../.dist/ s3://cx-shared-frontend-bucket-dev/$(echo $USER) --profile aad",
       "postsync": "echo please visit https://cx-shared-frontend-bucket-dev.s3.eu-central-1.amazonaws.com/$(echo $USER)/index.html",
       "test": "react-scripts test --watchAll=false",
       "test:watch": "react-scripts test",
