@@ -8,9 +8,8 @@ import { Provider } from "react-redux"
 import { store } from "./store/store"
 
 class ErrorBoundary extends React.Component<{}, { hasError: boolean }, {}> {
-  constructor (props: any) {
-    super(props);
-    this.state = { hasError: false }
+  state = {
+    hasError: false
   }
 
   static getDerivedStateFromError (error: Error) {
