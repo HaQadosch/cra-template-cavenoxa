@@ -11,6 +11,7 @@
     "template",
     "typescript",
     "redux toolkit",
+    "redux-saga",
     "immer",
     "storybook"
   ],
