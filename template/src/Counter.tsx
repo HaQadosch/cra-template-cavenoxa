@@ -2,7 +2,7 @@ import React from 'react'
 import { AppDispatch } from './store/store'
 import { useDispatch, useSelector } from "react-redux"
 import { RootState, increment, decrement } from './store/rootReducer'
-import ErrorBoundary, { FallbackProps } from 'react-error-boundary'
+import { ErrorBoundary, FallbackProps } from 'react-error-boundary'
 
 const MyFallbackComponent: React.FC<FallbackProps> = ({ componentStack, error }) => (
   <div>
